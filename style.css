@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #6d28d9;
+  box-shadow: 0px 3px 6px 1px #94a3b8;
+}
+
+h1 {
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+#libraryContainer {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  height: 100%;
+}
+
+.bookContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-left: 5px solid #facc15;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 3px 6px 1px #94a3b8;
+}
+
+.bookContainer h2 {
+  font-size: 40px;
+}
+
+.pages {
+  font-size: 18px;
+}
+
+.coverImage {
+  object-fit: cover;
+  margin: 10px auto;
+  width: 100%;
+  height: 400px;
+}
+
+dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+dialog {
+  margin: auto;
+  border-radius: 15px;
+  opacity: 100;
+  transition: opacity 3s ease;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(10px);
+}
+
+dialog h1 {
+  padding: 20px;
+  background-color: #6d28d9;
+  margin: 0 auto;
+  color: white;
+}
+
+dialog form {
+  padding: 10px 50px;
+}
+
+dialog form label {
+  font-size: 22px;
+}
+
+dialog form input {
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 5px;
+  color: #64748b; }
+
+#inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#inputContainer div {
+  display: flex;
+  flex-direction: column;
+}
+
+#ifReadContainer {
+  display: flex;
+}
+
+#addBookBtn, #confirmBtn {
+  outline: none;
+  height: 80px;
+  text-align: center;
+  width: 80px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #1ECD97;
+  color: #1ECD97;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0px 3px 6px 1px #94a3b8;
+  margin: 40px;
+  position: sticky;
+  align-self: flex-end;
+  bottom: 50px;;
+}
+  
+#addBookBtn:hover, #confirmBtn:hover {
+    color: white;
+    background: #1ECD97;
+}
+
+
+#confirmBtn {
+  width: 250px;
+  font-size: 40px;
+}
+
+.removeButton {
+  outline: none;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+  border-radius: 40px;
+  background: #fff;
+  border: 2px solid #dc2626;
+  color: #dc2626;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0px 3px 6px 1px #94a3b8;
+  align-self: flex-end;
+}
+  
+.removeButton:hover {
+    color:white;
+    background: #dc2626;
+}
+
+.removeButton:after {
+  content: "×";
+}
+
+.readToggle {
+  align-self: center;
+  margin: 10px 0;
+  appearance: none;
+  width: 120px;
+  height: auto;
+  padding: 10px;
+  border-radius: 50px;
+  overflow: hidden;
+  text-align: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: #dc2626;
+  border: 2px solid #dc2626;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  box-shadow: 0px 3px 6px 1px #94a3b8;
+}
+
+.readToggle:before {
+  content: "Unread";
+}
+
+.readToggle:hover {
+  color: white;
+  background-color: #dc2626;
+}
+
+.readToggle:checked:before {
+  content: "Read";
+}
+
+.readToggle:checked {
+  background-color: white;
+  color: #1ECD97;
+  border: 2px solid #1ECD97;
+}
+
+.readToggle:checked:hover {
+  background-color: #1ECD97;
+  color: white;
+}
